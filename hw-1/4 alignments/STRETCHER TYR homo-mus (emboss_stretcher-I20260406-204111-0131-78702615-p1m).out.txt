@@ -1,0 +1,167 @@
+########################################
+# Program: stretcher
+# Rundate: Mon  6 Apr 2026 20:41:16
+# Commandline: stretcher
+#    -auto
+#    -stdout
+#    -asequence emboss_stretcher-I20260406-204111-0131-78702615-p1m.asequence
+#    -bsequence emboss_stretcher-I20260406-204111-0131-78702615-p1m.bsequence
+#    -datafile EBLOSUM62
+#    -gapopen 12
+#    -gapextend 2
+#    -aformat3 pair
+#    -sprotein1
+#    -sprotein2
+# Align_format: pair
+# Report_file: stdout
+########################################
+
+#=======================================
+#
+# Aligned_sequences: 2
+# 1: 80-1669
+# 2: 80-1252
+# Matrix: EBLOSUM62
+# Gap_penalty: 12
+# Extend_penalty: 2
+#
+# Length: 1590
+# Identity:    1009/1590 (63.5%)
+# Similarity:  1009/1590 (63.5%)
+# Gaps:         417/1590 (26.2%)
+# Score: 4950
+# 
+#
+#=======================================
+
+80-1669            1 ATGCTCCTGGCTGTTTTGTACTGCCTGCTGTGGAGTTTCCAGACCTCCGC     50
+                     |||.||.|||||||||||||.|||||.||||||||||||||||.|||.|.
+80-1252            1 ATGTTCTTGGCTGTTTTGTATTGCCTTCTGTGGAGTTTCCAGATCTCTGA     50
+
+80-1669           51 TGGCCATTTCCCTAGAGCCTGTGTCTCCTCTAAGAACCTGATGGAGAAGG    100
+                     |||||||||.|||.|||||||||.|||||||||||||.||.|||..||.|
+80-1252           51 TGGCCATTTTCCTCGAGCCTGTGCCTCCTCTAAGAACTTGTTGGCAAAAG    100
+
+80-1669          101 AATGCTGTCCACCGTGGAGCGGGGACAGGAGTCCCTGTGGCCAGCTTTCA    150
+                     |||||||.|||||.||||..||.||..||||||||||.||||||||||||
+80-1252          101 AATGCTGCCCACCATGGATGGGTGATGGGAGTCCCTGCGGCCAGCTTTCA    150
+
+80-1669          151 GGCAGAGGTTCCTGTCAGAATATCCTTCTGTCCAATGCACCACTTGGGCC    200
+                     ||||||||||||||.|||.|||||||||||||||.|||||||..|||.||
+80-1252          151 GGCAGAGGTTCCTGCCAGGATATCCTTCTGTCCAGTGCACCATCTGGACC    200
+
+80-1669          201 TCAATTTCCCTTCACAGGGGTGGATGACCGGGAGTCGTGGCCTTCCGTCT    250
+                     |||.||.|||||||.|||||||||||||||.|||||.|||||.||.||.|
+80-1252          201 TCAGTTCCCCTTCAAAGGGGTGGATGACCGTGAGTCCTGGCCCTCTGTGT    250
+
+80-1669          251 TTTATAATAGGACCTGCCAGTGCTCTGGCAACTTCATGGGATTCAACTGT    300
+                     |||||||||||||||||||||||||.||||||||||||||.||||||||.
+80-1252          251 TTTATAATAGGACCTGCCAGTGCTCAGGCAACTTCATGGGTTTCAACTGC    300
+
+80-1669          301 GGAAACTGCAAGTTTGGCTTTTGGGGACCAAACTGCACAGAGAGACGACT    350
+                     ||||||||.||||||||.|||.||||.|||||.||.|||||||..|||.|
+80-1252          301 GGAAACTGTAAGTTTGGATTTGGGGGCCCAAATTGTACAGAGAAGCGAGT    350
+
+80-1669          351 CTTGGTGAGAAGAAACATCTTCGATTTGAGTGCCCCAGAGAAGGACAAAT    400
+                     ||||.|.|||||||||||.||.||||||||||.|.|.||.|||.|.||.|
+80-1252          351 CTTGATTAGAAGAAACATTTTTGATTTGAGTGTCTCCGAAAAGAATAAGT    400
+
+80-1669          401 TTTTTGCCTACCTCACTTTAGCAAAGCATACCATCAGCTCAGACTATGTC    450
+                     |.|||.|.|||||||||||||||||.|||||.||||||||||.|||||||
+80-1252          401 TCTTTTCTTACCTCACTTTAGCAAAACATACTATCAGCTCAGTCTATGTC    450
+
+80-1669          451 ATCCCCATAGGGACCTATGGCCAAATGAAAAATGGATCAACACCCATGTT    500
+                     |||||||.|||.|||||||||||||||||.|||||.||||||||||||||
+80-1252          451 ATCCCCACAGGCACCTATGGCCAAATGAACAATGGGTCAACACCCATGTT    500
+
+80-1669          501 TAACGACATCAATATTTATGACCTCTTTGTCTGGATGCATTATTATGTGT    550
+                     |||.||.|||||.||.||.|||||||||||.|||||||||||.|||||||
+80-1252          501 TAATGATATCAACATCTACGACCTCTTTGTATGGATGCATTACTATGTGT    550
+
+80-1669          551 CAATGGATGCACTGCTTGGGGGATCTGAAATCTGGAGAGACATTGATTTT    600
+                     |||.|||..|||||||||||||.||||||||.|||||.||||||||||||
+80-1252          551 CAAGGGACACACTGCTTGGGGGCTCTGAAATATGGAGGGACATTGATTTT    600
+
+80-1669          601 GCCCATGAAGCACCAGCTTTTCTGCCTTGGCATAGACTCTTCTTGTTGCG    650
+                     ||||||||||||||||..||||||||||||||.|||||.||||||||...
+80-1252          601 GCCCATGAAGCACCAGGGTTTCTGCCTTGGCACAGACTTTTCTTGTTATT    650
+
+80-1669          651 GTGGGAACAAGAAATCCAGAAGCTGACAGGAGATGAAAACTTCACTATTC    700
+                     |||||||||||||||.|...|.||.||.||.|||||.|||||||||.|||
+80-1252          651 GTGGGAACAAGAAATTCGAGAACTAACTGGGGATGAGAACTTCACTGTTC    700
+
+80-1669          701 CATATTGGGACTGGCGGGATGCAGAAAAGTGTGACATTTGCACAGATGAG    750
+                     ||||.|||||.|||.|.|||||||||||.|||||||||||||||||||||
+80-1252          701 CATACTGGGATTGGAGAGATGCAGAAAACTGTGACATTTGCACAGATGAG    750
+
+80-1669          751 TACATGGGAGGTCAGCACCCCACAAATCCTAACTTACTCAGCCCAGCATC    800
+                     |||.|||||||||..|||||...|||||||||||||||||||||||||||
+80-1252          751 TACTTGGGAGGTCGTCACCCTGAAAATCCTAACTTACTCAGCCCAGCATC    800
+
+80-1669          801 ATTCTTCTCCTCTTGGCAGATTGTCTGTAGCCGATTGGAGGAGTACAACA    850
+                     .|||||||||||.||||||||..|.||||||.|||..||.|||||.||.|
+80-1252          801 CTTCTTCTCCTCCTGGCAGATCATTTGTAGCAGATCAGAAGAGTATAATA    850
+
+80-1669          851 GCCATCAGTCTTTATGCAATGGAACGCCCGAGGGACCTTTACGGCGTAAT    900
+                     ||||||||..|||||||.|||||||.||.||||||||..||...||||||
+80-1252          851 GCCATCAGGTTTTATGCGATGGAACACCTGAGGGACCACTATTACGTAAT    900
+
+80-1669          901 CCTGGAAACCATGACAAATCCAGAACCCCAAGGCTCCCCTCTTCAGCTGA    950
+                     ||||||||||||||||||.|||.||||||.||||||||.||||||||.||
+80-1252          901 CCTGGAAACCATGACAAAGCCAAAACCCCCAGGCTCCCATCTTCAGCAGA    950
+
+80-1669          951 TGTAGAATTTTGCCTGAGTTTGACCCAATATGAATCTGGTTCCATGGATA   1000
+                     |||.||||||||.||||||||||||||.|||||||||||.||.|||||||
+80-1252          951 TGTGGAATTTTGTCTGAGTTTGACCCAGTATGAATCTGGATCAATGGATA   1000
+
+80-1669         1001 AAGCTGCCAATTTCAGCTTTAGAAATACACTGGAAGGATTTGCTAGTCCA   1050
+                     .|.||||||||||||||||||||||.||||||||||              
+80-1252         1001 GAACTGCCAATTTCAGCTTTAGAAACACACTGGAAG--------------   1036
+
+80-1669         1051 CTTACTGGGATAGCGGATGCCTCTCAAAGCAGCATGCACAATGCCTTGCA   1100
+                                                                       
+80-1252         1037 --------------------------------------------------   1036
+
+80-1669         1101 CATCTATATGAATGGAACAATGTCCCAGGTACAGGGATCTGCCAACGATC   1150
+                                                                       
+80-1252         1037 --------------------------------------------------   1036
+
+80-1669         1151 CTATCTTCCTTCTTCACCATGCATTTGTTGACAGTATTTTTGAGCAGTGG   1200
+                                                       |||||||||.||.|||
+80-1252         1037 ----------------------------------TATTTTTGAACAATGG   1052
+
+80-1669         1201 CTCCGAAGGCACCGTCCTCTTCAAGAAGTTTATCCAGAAGCCAATGCACC   1250
+                     ||.|||||||||||.||||||...||||||||.|||||||||||||||||
+80-1252         1053 CTGCGAAGGCACCGCCCTCTTTTGGAAGTTTACCCAGAAGCCAATGCACC   1102
+
+80-1669         1251 CATTGGACATAACCGGGAATCCTACATGGTTCCTTTTATACCACTGTACA   1300
+                     .||.||.||||||.|.||.||.||||||||||||||.|||||.||.||.|
+80-1252         1103 TATCGGCCATAACAGAGACTCTTACATGGTTCCTTTCATACCGCTCTATA   1152
+
+80-1669         1301 GAAATGGTGATTTCTTTATTTCATCCAAAGATCTGGGCTATGACTATAGC   1350
+                     ||||||||||||||||                                  
+80-1252         1153 GAAATGGTGATTTCTT----------------------------------   1168
+
+80-1669         1351 TATCTACAAGATTCAGACCCAGACTCTTTTCAAGACTACATTAAGTCCTA   1400
+                                                           |||         
+80-1252         1169 --------------------------------------CAT---------   1171
+
+80-1669         1401 TTTGGAACAAGCGAGTCGGATCTGGTCATGGCTCCTTGGGGCGGCGATGG   1450
+                                                                       
+80-1252         1172 --------------------------------------------------   1171
+
+80-1669         1451 TAGGGGCCGTCCTCACTGCCCTGCTGGCAGGGCTTGTGAGCTTGCTGTGT   1500
+                                                                       
+80-1252         1172 --------------------------------------------------   1171
+
+80-1669         1501 CGTCACAAGAGAAAGCAGCTTCCTGAAGAAAAGCAGCCACTCCTCATGGA   1550
+                                                                       
+80-1252         1172 --------------------------------------------------   1171
+
+80-1669         1551 GAAAGAGGATTACCACAGCTTGTATCAGAGCCATTTATAA   1590
+                                                           ||
+80-1252         1172 --------------------------------------AA   1173
+
+
+#---------------------------------------
+#---------------------------------------
