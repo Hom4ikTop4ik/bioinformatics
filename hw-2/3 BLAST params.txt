@@ -1,0 +1,11 @@
+Были оставлены значения по умолчанию:
+
+General params:
+  Expect threshold (ожидаемый порог): 0.05
+  Word size : 5
+  Max matches in a query range: 0
+
+Score params:
+  Matrix: BLOSUM62
+  Gap costs: Existence=11, Extension=1
+  Compositional adjustments (корректировки композиции): Conditional compositional score matrix adjustment (условная корректировка матрицы баллов по композиции)
