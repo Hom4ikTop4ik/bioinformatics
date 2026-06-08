@@ -810,6 +810,7 @@ cd ~/bioinf_hw3/cwl
 
 # Запуск (у меня занял минуты 3-4)
 cwltool --outdir ../cwl_results mapping_workflow.cwl input_mapping.yml
+cwltool --debug --outdir ../cwl_results mapping_workflow.cwl input_mapping.yml 2>&1 | tee ../cwl_results/pipeline_debug.log
 
 # Или с выводом в консоль (без сохранения промежуточных файлов)
 cwltool mapping_workflow.cwl input_mapping.yml

@@ -1,0 +1,1463 @@
+/home/voblgobl/miniconda3/envs/cwl_env/lib/python3.9/site-packages/requests/__init__.py:86: RequestsDependencyWarning: Unable to find acceptable character detection dependency (chardet or charset_normalizer).
+  warnings.warn(
+[1;30mINFO[0m /home/voblgobl/miniconda3/envs/cwl_env/bin/cwltool 3.1.20250715140722
+[1;30mINFO[0m Resolved 'mapping_workflow.cwl' to 'file:///home/voblgobl/bioinf_hw3/cwl/mapping_workflow.cwl'
+[1;30mWARNING[0m [33mWorkflow checker warning:
+mapping_workflow.cwl:16:5: Source 'reference' of type "File" may be incompatible
+mapping_workflow.cwl:54:7:   with sink 'reference' of type "File"[0m
+[1;30mDEBUG[0m [32m[workflow ] initialized from file:///home/voblgobl/bioinf_hw3/cwl/mapping_workflow.cwl[0m
+[1;30mINFO[0m [workflow ] start
+[1;30mDEBUG[0m [32m[workflow ] inputs {
+    "reference": {
+        "class": "File",
+        "secondaryFiles": [
+            {
+                "class": "File",
+                "location": "file:///home/voblgobl/bioinf_hw3/ref/ecoli_ref.fna.amb",
+                "size": 12,
+                "basename": "ecoli_ref.fna.amb",
+                "nameroot": "ecoli_ref.fna",
+                "nameext": ".amb"
+            },
+            {
+                "class": "File",
+                "location": "file:///home/voblgobl/bioinf_hw3/ref/ecoli_ref.fna.ann",
+                "size": 98,
+                "basename": "ecoli_ref.fna.ann",
+                "nameroot": "ecoli_ref.fna",
+                "nameext": ".ann"
+            },
+            {
+                "class": "File",
+                "location": "file:///home/voblgobl/bioinf_hw3/ref/ecoli_ref.fna.bwt",
+                "size": 4641732,
+                "basename": "ecoli_ref.fna.bwt",
+                "nameroot": "ecoli_ref.fna",
+                "nameext": ".bwt"
+            },
+            {
+                "class": "File",
+                "location": "file:///home/voblgobl/bioinf_hw3/ref/ecoli_ref.fna.pac",
+                "size": 1160415,
+                "basename": "ecoli_ref.fna.pac",
+                "nameroot": "ecoli_ref.fna",
+                "nameext": ".pac"
+            },
+            {
+                "class": "File",
+                "location": "file:///home/voblgobl/bioinf_hw3/ref/ecoli_ref.fna.sa",
+                "size": 2320880,
+                "basename": "ecoli_ref.fna.sa",
+                "nameroot": "ecoli_ref.fna",
+                "nameext": ".sa"
+            }
+        ],
+        "location": "file:///home/voblgobl/bioinf_hw3/ref/ecoli_ref.fna",
+        "size": 4699745,
+        "basename": "ecoli_ref.fna",
+        "nameroot": "ecoli_ref",
+        "nameext": ".fna"
+    },
+    "reads_R1": {
+        "class": "File",
+        "location": "file:///home/voblgobl/bioinf_hw3/data/SRR35085086_1.fastq.gz",
+        "size": 105052947,
+        "basename": "SRR35085086_1.fastq.gz",
+        "nameroot": "SRR35085086_1.fastq",
+        "nameext": ".gz"
+    },
+    "reads_R2": {
+        "class": "File",
+        "location": "file:///home/voblgobl/bioinf_hw3/data/SRR35085086_2.fastq.gz",
+        "size": 105250649,
+        "basename": "SRR35085086_2.fastq.gz",
+        "nameroot": "SRR35085086_2.fastq",
+        "nameext": ".gz"
+    },
+    "ok_threshold": 95,
+    "pot_threshold": 80
+}[0m
+[1;30mDEBUG[0m [32m[workflow ] job step file:///home/voblgobl/bioinf_hw3/cwl/mapping_workflow.cwl#sort_bam not ready[0m
+[1;30mDEBUG[0m [32m[workflow ] job step file:///home/voblgobl/bioinf_hw3/cwl/mapping_workflow.cwl#parse not ready[0m
+[1;30mDEBUG[0m [32m[workflow ] job step file:///home/voblgobl/bioinf_hw3/cwl/mapping_workflow.cwl#flagstat not ready[0m
+[1;30mDEBUG[0m [32m[workflow ] job step file:///home/voblgobl/bioinf_hw3/cwl/mapping_workflow.cwl#index not ready[0m
+[1;30mINFO[0m [workflow ] starting step bwa
+[1;30mDEBUG[0m [32m[step bwa] job input {
+    "file:///home/voblgobl/bioinf_hw3/cwl/mapping_workflow.cwl#bwa/reads_R1": {
+        "class": "File",
+        "location": "file:///home/voblgobl/bioinf_hw3/data/SRR35085086_1.fastq.gz",
+        "size": 105052947,
+        "basename": "SRR35085086_1.fastq.gz",
+        "nameroot": "SRR35085086_1.fastq",
+        "nameext": ".gz"
+    },
+    "file:///home/voblgobl/bioinf_hw3/cwl/mapping_workflow.cwl#bwa/reads_R2": {
+        "class": "File",
+        "location": "file:///home/voblgobl/bioinf_hw3/data/SRR35085086_2.fastq.gz",
+        "size": 105250649,
+        "basename": "SRR35085086_2.fastq.gz",
+        "nameroot": "SRR35085086_2.fastq",
+        "nameext": ".gz"
+    },
+    "file:///home/voblgobl/bioinf_hw3/cwl/mapping_workflow.cwl#bwa/reference": {
+        "class": "File",
+        "secondaryFiles": [
+            {
+                "class": "File",
+                "location": "file:///home/voblgobl/bioinf_hw3/ref/ecoli_ref.fna.amb",
+                "size": 12,
+                "basename": "ecoli_ref.fna.amb",
+                "nameroot": "ecoli_ref.fna",
+                "nameext": ".amb"
+            },
+            {
+                "class": "File",
+                "location": "file:///home/voblgobl/bioinf_hw3/ref/ecoli_ref.fna.ann",
+                "size": 98,
+                "basename": "ecoli_ref.fna.ann",
+                "nameroot": "ecoli_ref.fna",
+                "nameext": ".ann"
+            },
+            {
+                "class": "File",
+                "location": "file:///home/voblgobl/bioinf_hw3/ref/ecoli_ref.fna.bwt",
+                "size": 4641732,
+                "basename": "ecoli_ref.fna.bwt",
+                "nameroot": "ecoli_ref.fna",
+                "nameext": ".bwt"
+            },
+            {
+                "class": "File",
+                "location": "file:///home/voblgobl/bioinf_hw3/ref/ecoli_ref.fna.pac",
+                "size": 1160415,
+                "basename": "ecoli_ref.fna.pac",
+                "nameroot": "ecoli_ref.fna",
+                "nameext": ".pac"
+            },
+            {
+                "class": "File",
+                "location": "file:///home/voblgobl/bioinf_hw3/ref/ecoli_ref.fna.sa",
+                "size": 2320880,
+                "basename": "ecoli_ref.fna.sa",
+                "nameroot": "ecoli_ref.fna",
+                "nameext": ".sa"
+            }
+        ],
+        "location": "file:///home/voblgobl/bioinf_hw3/ref/ecoli_ref.fna",
+        "size": 4699745,
+        "basename": "ecoli_ref.fna",
+        "nameroot": "ecoli_ref",
+        "nameext": ".fna"
+    }
+}[0m
+[1;30mDEBUG[0m [32m[step bwa] evaluated job input to {
+    "file:///home/voblgobl/bioinf_hw3/cwl/mapping_workflow.cwl#bwa/reads_R1": {
+        "class": "File",
+        "location": "file:///home/voblgobl/bioinf_hw3/data/SRR35085086_1.fastq.gz",
+        "size": 105052947,
+        "basename": "SRR35085086_1.fastq.gz",
+        "nameroot": "SRR35085086_1.fastq",
+        "nameext": ".gz"
+    },
+    "file:///home/voblgobl/bioinf_hw3/cwl/mapping_workflow.cwl#bwa/reads_R2": {
+        "class": "File",
+        "location": "file:///home/voblgobl/bioinf_hw3/data/SRR35085086_2.fastq.gz",
+        "size": 105250649,
+        "basename": "SRR35085086_2.fastq.gz",
+        "nameroot": "SRR35085086_2.fastq",
+        "nameext": ".gz"
+    },
+    "file:///home/voblgobl/bioinf_hw3/cwl/mapping_workflow.cwl#bwa/reference": {
+        "class": "File",
+        "secondaryFiles": [
+            {
+                "class": "File",
+                "location": "file:///home/voblgobl/bioinf_hw3/ref/ecoli_ref.fna.amb",
+                "size": 12,
+                "basename": "ecoli_ref.fna.amb",
+                "nameroot": "ecoli_ref.fna",
+                "nameext": ".amb"
+            },
+            {
+                "class": "File",
+                "location": "file:///home/voblgobl/bioinf_hw3/ref/ecoli_ref.fna.ann",
+                "size": 98,
+                "basename": "ecoli_ref.fna.ann",
+                "nameroot": "ecoli_ref.fna",
+                "nameext": ".ann"
+            },
+            {
+                "class": "File",
+                "location": "file:///home/voblgobl/bioinf_hw3/ref/ecoli_ref.fna.bwt",
+                "size": 4641732,
+                "basename": "ecoli_ref.fna.bwt",
+                "nameroot": "ecoli_ref.fna",
+                "nameext": ".bwt"
+            },
+            {
+                "class": "File",
+                "location": "file:///home/voblgobl/bioinf_hw3/ref/ecoli_ref.fna.pac",
+                "size": 1160415,
+                "basename": "ecoli_ref.fna.pac",
+                "nameroot": "ecoli_ref.fna",
+                "nameext": ".pac"
+            },
+            {
+                "class": "File",
+                "location": "file:///home/voblgobl/bioinf_hw3/ref/ecoli_ref.fna.sa",
+                "size": 2320880,
+                "basename": "ecoli_ref.fna.sa",
+                "nameroot": "ecoli_ref.fna",
+                "nameext": ".sa"
+            }
+        ],
+        "location": "file:///home/voblgobl/bioinf_hw3/ref/ecoli_ref.fna",
+        "size": 4699745,
+        "basename": "ecoli_ref.fna",
+        "nameroot": "ecoli_ref",
+        "nameext": ".fna"
+    }
+}[0m
+[1;30mINFO[0m [step bwa] start
+[1;30mDEBUG[0m [32m[job bwa] initializing from file:///home/voblgobl/bioinf_hw3/cwl/bwa_mem.cwl as part of step bwa[0m
+[1;30mDEBUG[0m [32m[job bwa] {
+    "reads_R1": {
+        "class": "File",
+        "location": "file:///home/voblgobl/bioinf_hw3/data/SRR35085086_1.fastq.gz",
+        "size": 105052947,
+        "basename": "SRR35085086_1.fastq.gz",
+        "nameroot": "SRR35085086_1.fastq",
+        "nameext": ".gz"
+    },
+    "reads_R2": {
+        "class": "File",
+        "location": "file:///home/voblgobl/bioinf_hw3/data/SRR35085086_2.fastq.gz",
+        "size": 105250649,
+        "basename": "SRR35085086_2.fastq.gz",
+        "nameroot": "SRR35085086_2.fastq",
+        "nameext": ".gz"
+    },
+    "reference": {
+        "class": "File",
+        "secondaryFiles": [
+            {
+                "class": "File",
+                "location": "file:///home/voblgobl/bioinf_hw3/ref/ecoli_ref.fna.amb",
+                "size": 12,
+                "basename": "ecoli_ref.fna.amb",
+                "nameroot": "ecoli_ref.fna",
+                "nameext": ".amb"
+            },
+            {
+                "class": "File",
+                "location": "file:///home/voblgobl/bioinf_hw3/ref/ecoli_ref.fna.ann",
+                "size": 98,
+                "basename": "ecoli_ref.fna.ann",
+                "nameroot": "ecoli_ref.fna",
+                "nameext": ".ann"
+            },
+            {
+                "class": "File",
+                "location": "file:///home/voblgobl/bioinf_hw3/ref/ecoli_ref.fna.bwt",
+                "size": 4641732,
+                "basename": "ecoli_ref.fna.bwt",
+                "nameroot": "ecoli_ref.fna",
+                "nameext": ".bwt"
+            },
+            {
+                "class": "File",
+                "location": "file:///home/voblgobl/bioinf_hw3/ref/ecoli_ref.fna.pac",
+                "size": 1160415,
+                "basename": "ecoli_ref.fna.pac",
+                "nameroot": "ecoli_ref.fna",
+                "nameext": ".pac"
+            },
+            {
+                "class": "File",
+                "location": "file:///home/voblgobl/bioinf_hw3/ref/ecoli_ref.fna.sa",
+                "size": 2320880,
+                "basename": "ecoli_ref.fna.sa",
+                "nameroot": "ecoli_ref.fna",
+                "nameext": ".sa"
+            }
+        ],
+        "location": "file:///home/voblgobl/bioinf_hw3/ref/ecoli_ref.fna",
+        "size": 4699745,
+        "basename": "ecoli_ref.fna",
+        "nameroot": "ecoli_ref",
+        "nameext": ".fna"
+    },
+    "threads": 2
+}[0m
+[1;30mDEBUG[0m [32m[job bwa] path mappings is {
+    "file:///home/voblgobl/bioinf_hw3/data/SRR35085086_1.fastq.gz": [
+        "/home/voblgobl/bioinf_hw3/data/SRR35085086_1.fastq.gz",
+        "/tmp/7mj9qcri/stgd485040f-4125-4fe4-9d24-d80035109496/SRR35085086_1.fastq.gz",
+        "File",
+        true
+    ],
+    "file:///home/voblgobl/bioinf_hw3/data/SRR35085086_2.fastq.gz": [
+        "/home/voblgobl/bioinf_hw3/data/SRR35085086_2.fastq.gz",
+        "/tmp/7mj9qcri/stg93d23ed3-66b1-4002-9a22-d6520495e465/SRR35085086_2.fastq.gz",
+        "File",
+        true
+    ],
+    "file:///home/voblgobl/bioinf_hw3/ref/ecoli_ref.fna": [
+        "/home/voblgobl/bioinf_hw3/ref/ecoli_ref.fna",
+        "/tmp/7mj9qcri/stg8708e76f-a9d6-4b66-8f62-97aa877962e1/ecoli_ref.fna",
+        "File",
+        true
+    ],
+    "file:///home/voblgobl/bioinf_hw3/ref/ecoli_ref.fna.amb": [
+        "/home/voblgobl/bioinf_hw3/ref/ecoli_ref.fna.amb",
+        "/tmp/7mj9qcri/stg8708e76f-a9d6-4b66-8f62-97aa877962e1/ecoli_ref.fna.amb",
+        "File",
+        true
+    ],
+    "file:///home/voblgobl/bioinf_hw3/ref/ecoli_ref.fna.ann": [
+        "/home/voblgobl/bioinf_hw3/ref/ecoli_ref.fna.ann",
+        "/tmp/7mj9qcri/stg8708e76f-a9d6-4b66-8f62-97aa877962e1/ecoli_ref.fna.ann",
+        "File",
+        true
+    ],
+    "file:///home/voblgobl/bioinf_hw3/ref/ecoli_ref.fna.bwt": [
+        "/home/voblgobl/bioinf_hw3/ref/ecoli_ref.fna.bwt",
+        "/tmp/7mj9qcri/stg8708e76f-a9d6-4b66-8f62-97aa877962e1/ecoli_ref.fna.bwt",
+        "File",
+        true
+    ],
+    "file:///home/voblgobl/bioinf_hw3/ref/ecoli_ref.fna.pac": [
+        "/home/voblgobl/bioinf_hw3/ref/ecoli_ref.fna.pac",
+        "/tmp/7mj9qcri/stg8708e76f-a9d6-4b66-8f62-97aa877962e1/ecoli_ref.fna.pac",
+        "File",
+        true
+    ],
+    "file:///home/voblgobl/bioinf_hw3/ref/ecoli_ref.fna.sa": [
+        "/home/voblgobl/bioinf_hw3/ref/ecoli_ref.fna.sa",
+        "/tmp/7mj9qcri/stg8708e76f-a9d6-4b66-8f62-97aa877962e1/ecoli_ref.fna.sa",
+        "File",
+        true
+    ]
+}[0m
+[1;30mDEBUG[0m [32m[job bwa] command line bindings is [
+    {
+        "position": [
+            -1000000,
+            0
+        ],
+        "datum": "bwa"
+    },
+    {
+        "position": [
+            -1000000,
+            1
+        ],
+        "datum": "mem"
+    },
+    {
+        "prefix": "-t",
+        "position": [
+            0,
+            "threads"
+        ],
+        "datum": 2
+    },
+    {
+        "position": [
+            1,
+            "reference"
+        ],
+        "datum": {
+            "class": "File",
+            "secondaryFiles": [
+                {
+                    "class": "File",
+                    "location": "file:///home/voblgobl/bioinf_hw3/ref/ecoli_ref.fna.amb",
+                    "size": 12,
+                    "basename": "ecoli_ref.fna.amb",
+                    "nameroot": "ecoli_ref.fna",
+                    "nameext": ".amb",
+                    "path": "/tmp/7mj9qcri/stg8708e76f-a9d6-4b66-8f62-97aa877962e1/ecoli_ref.fna.amb",
+                    "dirname": "/tmp/7mj9qcri/stg8708e76f-a9d6-4b66-8f62-97aa877962e1"
+                },
+                {
+                    "class": "File",
+                    "location": "file:///home/voblgobl/bioinf_hw3/ref/ecoli_ref.fna.ann",
+                    "size": 98,
+                    "basename": "ecoli_ref.fna.ann",
+                    "nameroot": "ecoli_ref.fna",
+                    "nameext": ".ann",
+                    "path": "/tmp/7mj9qcri/stg8708e76f-a9d6-4b66-8f62-97aa877962e1/ecoli_ref.fna.ann",
+                    "dirname": "/tmp/7mj9qcri/stg8708e76f-a9d6-4b66-8f62-97aa877962e1"
+                },
+                {
+                    "class": "File",
+                    "location": "file:///home/voblgobl/bioinf_hw3/ref/ecoli_ref.fna.bwt",
+                    "size": 4641732,
+                    "basename": "ecoli_ref.fna.bwt",
+                    "nameroot": "ecoli_ref.fna",
+                    "nameext": ".bwt",
+                    "path": "/tmp/7mj9qcri/stg8708e76f-a9d6-4b66-8f62-97aa877962e1/ecoli_ref.fna.bwt",
+                    "dirname": "/tmp/7mj9qcri/stg8708e76f-a9d6-4b66-8f62-97aa877962e1"
+                },
+                {
+                    "class": "File",
+                    "location": "file:///home/voblgobl/bioinf_hw3/ref/ecoli_ref.fna.pac",
+                    "size": 1160415,
+                    "basename": "ecoli_ref.fna.pac",
+                    "nameroot": "ecoli_ref.fna",
+                    "nameext": ".pac",
+                    "path": "/tmp/7mj9qcri/stg8708e76f-a9d6-4b66-8f62-97aa877962e1/ecoli_ref.fna.pac",
+                    "dirname": "/tmp/7mj9qcri/stg8708e76f-a9d6-4b66-8f62-97aa877962e1"
+                },
+                {
+                    "class": "File",
+                    "location": "file:///home/voblgobl/bioinf_hw3/ref/ecoli_ref.fna.sa",
+                    "size": 2320880,
+                    "basename": "ecoli_ref.fna.sa",
+                    "nameroot": "ecoli_ref.fna",
+                    "nameext": ".sa",
+                    "path": "/tmp/7mj9qcri/stg8708e76f-a9d6-4b66-8f62-97aa877962e1/ecoli_ref.fna.sa",
+                    "dirname": "/tmp/7mj9qcri/stg8708e76f-a9d6-4b66-8f62-97aa877962e1"
+                }
+            ],
+            "location": "file:///home/voblgobl/bioinf_hw3/ref/ecoli_ref.fna",
+            "size": 4699745,
+            "basename": "ecoli_ref.fna",
+            "nameroot": "ecoli_ref",
+            "nameext": ".fna",
+            "path": "/tmp/7mj9qcri/stg8708e76f-a9d6-4b66-8f62-97aa877962e1/ecoli_ref.fna",
+            "dirname": "/tmp/7mj9qcri/stg8708e76f-a9d6-4b66-8f62-97aa877962e1"
+        }
+    },
+    {
+        "position": [
+            2,
+            "reads_R1"
+        ],
+        "datum": {
+            "class": "File",
+            "location": "file:///home/voblgobl/bioinf_hw3/data/SRR35085086_1.fastq.gz",
+            "size": 105052947,
+            "basename": "SRR35085086_1.fastq.gz",
+            "nameroot": "SRR35085086_1.fastq",
+            "nameext": ".gz",
+            "path": "/tmp/7mj9qcri/stgd485040f-4125-4fe4-9d24-d80035109496/SRR35085086_1.fastq.gz",
+            "dirname": "/tmp/7mj9qcri/stgd485040f-4125-4fe4-9d24-d80035109496"
+        }
+    },
+    {
+        "position": [
+            3,
+            "reads_R2"
+        ],
+        "datum": {
+            "class": "File",
+            "location": "file:///home/voblgobl/bioinf_hw3/data/SRR35085086_2.fastq.gz",
+            "size": 105250649,
+            "basename": "SRR35085086_2.fastq.gz",
+            "nameroot": "SRR35085086_2.fastq",
+            "nameext": ".gz",
+            "path": "/tmp/7mj9qcri/stg93d23ed3-66b1-4002-9a22-d6520495e465/SRR35085086_2.fastq.gz",
+            "dirname": "/tmp/7mj9qcri/stg93d23ed3-66b1-4002-9a22-d6520495e465"
+        }
+    }
+][0m
+[1;30mDEBUG[0m [32m[job bwa] initial work dir {}[0m
+[1;30mINFO[0m [job bwa] /tmp/v5kk3c25$ bwa \
+    mem \
+    -t \
+    2 \
+    /tmp/7mj9qcri/stg8708e76f-a9d6-4b66-8f62-97aa877962e1/ecoli_ref.fna \
+    /tmp/7mj9qcri/stgd485040f-4125-4fe4-9d24-d80035109496/SRR35085086_1.fastq.gz \
+    /tmp/7mj9qcri/stg93d23ed3-66b1-4002-9a22-d6520495e465/SRR35085086_2.fastq.gz > /tmp/v5kk3c25/aligned.sam
+[M::bwa_idx_load_from_disk] read 0 ALT contigs
+[M::process] read 132772 sequences (20000246 bp)...
+[M::process] read 132770 sequences (20000003 bp)...
+[M::mem_pestat] # candidate unique pairs for (FF, FR, RF, RR): (11, 56179, 0, 6)
+[M::mem_pestat] analyzing insert size distribution for orientation FF...
+[M::mem_pestat] (25, 50, 75) percentile: (158, 249, 394)
+[M::mem_pestat] low and high boundaries for computing mean and std.dev: (1, 866)
+[M::mem_pestat] mean and std.dev: (218.56, 109.51)
+[M::mem_pestat] low and high boundaries for proper pairs: (1, 1102)
+[M::mem_pestat] analyzing insert size distribution for orientation FR...
+[M::mem_pestat] (25, 50, 75) percentile: (131, 217, 333)
+[M::mem_pestat] low and high boundaries for computing mean and std.dev: (1, 737)
+[M::mem_pestat] mean and std.dev: (242.89, 143.05)
+[M::mem_pestat] low and high boundaries for proper pairs: (1, 939)
+[M::mem_pestat] skip orientation RF as there are not enough pairs
+[M::mem_pestat] skip orientation RR as there are not enough pairs
+[M::mem_pestat] skip orientation FF
+[M::mem_process_seqs] Processed 132772 reads in 5.453 CPU sec, 2.610 real sec
+[M::process] read 132766 sequences (20000049 bp)...
+[M::mem_pestat] # candidate unique pairs for (FF, FR, RF, RR): (9, 55820, 2, 9)
+[M::mem_pestat] skip orientation FF as there are not enough pairs
+[M::mem_pestat] analyzing insert size distribution for orientation FR...
+[M::mem_pestat] (25, 50, 75) percentile: (121, 200, 301)
+[M::mem_pestat] low and high boundaries for computing mean and std.dev: (1, 661)
+[M::mem_pestat] mean and std.dev: (220.73, 125.80)
+[M::mem_pestat] low and high boundaries for proper pairs: (1, 841)
+[M::mem_pestat] skip orientation RF as there are not enough pairs
+[M::mem_pestat] skip orientation RR as there are not enough pairs
+[M::mem_process_seqs] Processed 132770 reads in 6.203 CPU sec, 2.965 real sec
+[M::process] read 132760 sequences (20000061 bp)...
+[M::mem_pestat] # candidate unique pairs for (FF, FR, RF, RR): (7, 56073, 2, 8)
+[M::mem_pestat] skip orientation FF as there are not enough pairs
+[M::mem_pestat] analyzing insert size distribution for orientation FR...
+[M::mem_pestat] (25, 50, 75) percentile: (123, 204, 309)
+[M::mem_pestat] low and high boundaries for computing mean and std.dev: (1, 681)
+[M::mem_pestat] mean and std.dev: (226.80, 131.63)
+[M::mem_pestat] low and high boundaries for proper pairs: (1, 867)
+[M::mem_pestat] skip orientation RF as there are not enough pairs
+[M::mem_pestat] skip orientation RR as there are not enough pairs
+[M::mem_process_seqs] Processed 132766 reads in 5.609 CPU sec, 2.658 real sec
+[M::process] read 132768 sequences (20000191 bp)...
+[M::mem_pestat] # candidate unique pairs for (FF, FR, RF, RR): (6, 55759, 1, 8)
+[M::mem_pestat] skip orientation FF as there are not enough pairs
+[M::mem_pestat] analyzing insert size distribution for orientation FR...
+[M::mem_pestat] (25, 50, 75) percentile: (119, 198, 296)
+[M::mem_pestat] low and high boundaries for computing mean and std.dev: (1, 650)
+[M::mem_pestat] mean and std.dev: (216.72, 122.93)
+[M::mem_pestat] low and high boundaries for proper pairs: (1, 827)
+[M::mem_pestat] skip orientation RF as there are not enough pairs
+[M::mem_pestat] skip orientation RR as there are not enough pairs
+[M::mem_process_seqs] Processed 132760 reads in 5.859 CPU sec, 2.776 real sec
+[M::process] read 132770 sequences (20000286 bp)...
+[M::mem_pestat] # candidate unique pairs for (FF, FR, RF, RR): (7, 55851, 2, 10)
+[M::mem_pestat] skip orientation FF as there are not enough pairs
+[M::mem_pestat] analyzing insert size distribution for orientation FR...
+[M::mem_pestat] (25, 50, 75) percentile: (122, 202, 305)
+[M::mem_pestat] low and high boundaries for computing mean and std.dev: (1, 671)
+[M::mem_pestat] mean and std.dev: (223.01, 128.26)
+[M::mem_pestat] low and high boundaries for proper pairs: (1, 854)
+[M::mem_pestat] skip orientation RF as there are not enough pairs
+[M::mem_pestat] analyzing insert size distribution for orientation RR...
+[M::mem_pestat] (25, 50, 75) percentile: (115, 276, 595)
+[M::mem_pestat] low and high boundaries for computing mean and std.dev: (1, 1555)
+[M::mem_pestat] mean and std.dev: (480.50, 478.49)
+[M::mem_pestat] low and high boundaries for proper pairs: (1, 2394)
+[M::mem_pestat] skip orientation RR
+[M::mem_process_seqs] Processed 132768 reads in 5.531 CPU sec, 2.591 real sec
+[M::process] read 132762 sequences (20000056 bp)...
+[M::mem_pestat] # candidate unique pairs for (FF, FR, RF, RR): (13, 56129, 0, 7)
+[M::mem_pestat] analyzing insert size distribution for orientation FF...
+[M::mem_pestat] (25, 50, 75) percentile: (125, 176, 263)
+[M::mem_pestat] low and high boundaries for computing mean and std.dev: (1, 539)
+[M::mem_pestat] mean and std.dev: (188.50, 105.50)
+[M::mem_pestat] low and high boundaries for proper pairs: (1, 677)
+[M::mem_pestat] analyzing insert size distribution for orientation FR...
+[M::mem_pestat] (25, 50, 75) percentile: (131, 215, 327)
+[M::mem_pestat] low and high boundaries for computing mean and std.dev: (1, 719)
+[M::mem_pestat] mean and std.dev: (239.34, 139.29)
+[M::mem_pestat] low and high boundaries for proper pairs: (1, 915)
+[M::mem_pestat] skip orientation RF as there are not enough pairs
+[M::mem_pestat] skip orientation RR as there are not enough pairs
+[M::mem_pestat] skip orientation FF
+[M::mem_process_seqs] Processed 132770 reads in 5.438 CPU sec, 2.591 real sec
+[M::process] read 132770 sequences (20000298 bp)...
+[M::mem_pestat] # candidate unique pairs for (FF, FR, RF, RR): (7, 55908, 0, 9)
+[M::mem_pestat] skip orientation FF as there are not enough pairs
+[M::mem_pestat] analyzing insert size distribution for orientation FR...
+[M::mem_pestat] (25, 50, 75) percentile: (120, 198, 298)
+[M::mem_pestat] low and high boundaries for computing mean and std.dev: (1, 654)
+[M::mem_pestat] mean and std.dev: (218.41, 124.62)
+[M::mem_pestat] low and high boundaries for proper pairs: (1, 832)
+[M::mem_pestat] skip orientation RF as there are not enough pairs
+[M::mem_pestat] skip orientation RR as there are not enough pairs
+[M::mem_process_seqs] Processed 132762 reads in 5.594 CPU sec, 2.658 real sec
+[M::process] read 132758 sequences (20000065 bp)...
+[M::mem_pestat] # candidate unique pairs for (FF, FR, RF, RR): (8, 55822, 2, 6)
+[M::mem_pestat] skip orientation FF as there are not enough pairs
+[M::mem_pestat] analyzing insert size distribution for orientation FR...
+[M::mem_pestat] (25, 50, 75) percentile: (123, 203, 308)
+[M::mem_pestat] low and high boundaries for computing mean and std.dev: (1, 678)
+[M::mem_pestat] mean and std.dev: (225.55, 130.54)
+[M::mem_pestat] low and high boundaries for proper pairs: (1, 863)
+[M::mem_pestat] skip orientation RF as there are not enough pairs
+[M::mem_pestat] skip orientation RR as there are not enough pairs
+[M::mem_process_seqs] Processed 132770 reads in 5.984 CPU sec, 2.834 real sec
+[M::process] read 132766 sequences (20000027 bp)...
+[M::mem_pestat] # candidate unique pairs for (FF, FR, RF, RR): (4, 55440, 2, 3)
+[M::mem_pestat] skip orientation FF as there are not enough pairs
+[M::mem_pestat] analyzing insert size distribution for orientation FR...
+[M::mem_pestat] (25, 50, 75) percentile: (116, 190, 284)
+[M::mem_pestat] low and high boundaries for computing mean and std.dev: (1, 620)
+[M::mem_pestat] mean and std.dev: (209.18, 117.92)
+[M::mem_pestat] low and high boundaries for proper pairs: (1, 788)
+[M::mem_pestat] skip orientation RF as there are not enough pairs
+[M::mem_pestat] skip orientation RR as there are not enough pairs
+[M::mem_process_seqs] Processed 132758 reads in 6.266 CPU sec, 2.994 real sec
+[M::process] read 132766 sequences (20000240 bp)...
+[M::mem_pestat] # candidate unique pairs for (FF, FR, RF, RR): (5, 55655, 0, 7)
+[M::mem_pestat] skip orientation FF as there are not enough pairs
+[M::mem_pestat] analyzing insert size distribution for orientation FR...
+[M::mem_pestat] (25, 50, 75) percentile: (127, 207, 312)
+[M::mem_pestat] low and high boundaries for computing mean and std.dev: (1, 682)
+[M::mem_pestat] mean and std.dev: (229.34, 131.42)
+[M::mem_pestat] low and high boundaries for proper pairs: (1, 867)
+[M::mem_pestat] skip orientation RF as there are not enough pairs
+[M::mem_pestat] skip orientation RR as there are not enough pairs
+[M::mem_process_seqs] Processed 132766 reads in 6.469 CPU sec, 3.083 real sec
+[M::process] read 132768 sequences (20000288 bp)...
+[M::mem_pestat] # candidate unique pairs for (FF, FR, RF, RR): (6, 55220, 3, 4)
+[M::mem_pestat] skip orientation FF as there are not enough pairs
+[M::mem_pestat] analyzing insert size distribution for orientation FR...
+[M::mem_pestat] (25, 50, 75) percentile: (116, 190, 286)
+[M::mem_pestat] low and high boundaries for computing mean and std.dev: (1, 626)
+[M::mem_pestat] mean and std.dev: (209.79, 119.06)
+[M::mem_pestat] low and high boundaries for proper pairs: (1, 796)
+[M::mem_pestat] skip orientation RF as there are not enough pairs
+[M::mem_pestat] skip orientation RR as there are not enough pairs
+[M::mem_process_seqs] Processed 132766 reads in 6.516 CPU sec, 3.118 real sec
+[M::process] read 132764 sequences (20000020 bp)...
+[M::mem_pestat] # candidate unique pairs for (FF, FR, RF, RR): (2, 55611, 2, 6)
+[M::mem_pestat] skip orientation FF as there are not enough pairs
+[M::mem_pestat] analyzing insert size distribution for orientation FR...
+[M::mem_pestat] (25, 50, 75) percentile: (126, 207, 315)
+[M::mem_pestat] low and high boundaries for computing mean and std.dev: (1, 693)
+[M::mem_pestat] mean and std.dev: (231.18, 135.19)
+[M::mem_pestat] low and high boundaries for proper pairs: (1, 882)
+[M::mem_pestat] skip orientation RF as there are not enough pairs
+[M::mem_pestat] skip orientation RR as there are not enough pairs
+[M::mem_process_seqs] Processed 132768 reads in 6.406 CPU sec, 3.058 real sec
+[M::process] read 132762 sequences (20000003 bp)...
+[M::mem_pestat] # candidate unique pairs for (FF, FR, RF, RR): (5, 54835, 1, 8)
+[M::mem_pestat] skip orientation FF as there are not enough pairs
+[M::mem_pestat] analyzing insert size distribution for orientation FR...
+[M::mem_pestat] (25, 50, 75) percentile: (114, 186, 277)
+[M::mem_pestat] low and high boundaries for computing mean and std.dev: (1, 603)
+[M::mem_pestat] mean and std.dev: (203.41, 113.62)
+[M::mem_pestat] low and high boundaries for proper pairs: (1, 766)
+[M::mem_pestat] skip orientation RF as there are not enough pairs
+[M::mem_pestat] skip orientation RR as there are not enough pairs
+[M::mem_process_seqs] Processed 132764 reads in 7.172 CPU sec, 3.483 real sec
+[M::process] read 71680 sequences (10798124 bp)...
+[M::mem_pestat] # candidate unique pairs for (FF, FR, RF, RR): (11, 54937, 3, 7)
+[M::mem_pestat] analyzing insert size distribution for orientation FF...
+[M::mem_pestat] (25, 50, 75) percentile: (140, 229, 416)
+[M::mem_pestat] low and high boundaries for computing mean and std.dev: (1, 968)
+[M::mem_pestat] mean and std.dev: (245.70, 124.99)
+[M::mem_pestat] low and high boundaries for proper pairs: (1, 1244)
+[M::mem_pestat] analyzing insert size distribution for orientation FR...
+[M::mem_pestat] (25, 50, 75) percentile: (114, 187, 281)
+[M::mem_pestat] low and high boundaries for computing mean and std.dev: (1, 615)
+[M::mem_pestat] mean and std.dev: (206.63, 118.08)
+[M::mem_pestat] low and high boundaries for proper pairs: (1, 782)
+[M::mem_pestat] skip orientation RF as there are not enough pairs
+[M::mem_pestat] skip orientation RR as there are not enough pairs
+[M::mem_pestat] skip orientation FF
+[M::mem_process_seqs] Processed 132762 reads in 6.672 CPU sec, 3.235 real sec
+[M::mem_pestat] # candidate unique pairs for (FF, FR, RF, RR): (4, 29204, 1, 4)
+[M::mem_pestat] skip orientation FF as there are not enough pairs
+[M::mem_pestat] analyzing insert size distribution for orientation FR...
+[M::mem_pestat] (25, 50, 75) percentile: (108, 177, 262)
+[M::mem_pestat] low and high boundaries for computing mean and std.dev: (1, 570)
+[M::mem_pestat] mean and std.dev: (193.16, 107.07)
+[M::mem_pestat] low and high boundaries for proper pairs: (1, 724)
+[M::mem_pestat] skip orientation RF as there are not enough pairs
+[M::mem_pestat] skip orientation RR as there are not enough pairs
+[M::mem_process_seqs] Processed 71680 reads in 3.875 CPU sec, 1.876 real sec
+[main] Version: 0.7.19-r1273
+[main] CMD: bwa mem -t 2 /tmp/7mj9qcri/stg8708e76f-a9d6-4b66-8f62-97aa877962e1/ecoli_ref.fna /tmp/7mj9qcri/stgd485040f-4125-4fe4-9d24-d80035109496/SRR35085086_1.fastq.gz /tmp/7mj9qcri/stg93d23ed3-66b1-4002-9a22-d6520495e465/SRR35085086_2.fastq.gz
+[main] Real time: 42.946 sec; CPU: 89.406 sec
+[1;30mINFO[0m [job bwa] Max memory used: 231MiB
+[1;30mINFO[0m [job bwa] completed success
+[1;30mDEBUG[0m [32m[job bwa] outputs {
+    "sam_file": {
+        "location": "file:///tmp/v5kk3c25/aligned.sam",
+        "basename": "aligned.sam",
+        "nameroot": "aligned",
+        "nameext": ".sam",
+        "class": "File",
+        "checksum": "sha1$9e488e4d21c38fb76bdf596855d7cee381703a73",
+        "size": 808293052,
+        "http://commonwl.org/cwltool#generation": 0
+    }
+}[0m
+[1;30mDEBUG[0m [32m[step bwa] produced output {
+    "file:///home/voblgobl/bioinf_hw3/cwl/mapping_workflow.cwl#bwa/sam_file": {
+        "location": "file:///tmp/v5kk3c25/aligned.sam",
+        "basename": "aligned.sam",
+        "nameroot": "aligned",
+        "nameext": ".sam",
+        "class": "File",
+        "checksum": "sha1$9e488e4d21c38fb76bdf596855d7cee381703a73",
+        "size": 808293052,
+        "http://commonwl.org/cwltool#generation": 0
+    }
+}[0m
+[1;30mINFO[0m [step bwa] completed success
+[1;30mDEBUG[0m [32m[job bwa] Removing input staging directory /tmp/7mj9qcri[0m
+[1;30mDEBUG[0m [32m[job bwa] Removing temporary directory /tmp/8sk1kqq6[0m
+[1;30mINFO[0m [workflow ] starting step view
+[1;30mDEBUG[0m [32m[step view] job input {
+    "file:///home/voblgobl/bioinf_hw3/cwl/mapping_workflow.cwl#view/sam_file": {
+        "location": "file:///tmp/v5kk3c25/aligned.sam",
+        "basename": "aligned.sam",
+        "nameroot": "aligned",
+        "nameext": ".sam",
+        "class": "File",
+        "checksum": "sha1$9e488e4d21c38fb76bdf596855d7cee381703a73",
+        "size": 808293052,
+        "http://commonwl.org/cwltool#generation": 0
+    }
+}[0m
+[1;30mDEBUG[0m [32m[step view] evaluated job input to {
+    "file:///home/voblgobl/bioinf_hw3/cwl/mapping_workflow.cwl#view/sam_file": {
+        "location": "file:///tmp/v5kk3c25/aligned.sam",
+        "basename": "aligned.sam",
+        "nameroot": "aligned",
+        "nameext": ".sam",
+        "class": "File",
+        "checksum": "sha1$9e488e4d21c38fb76bdf596855d7cee381703a73",
+        "size": 808293052,
+        "http://commonwl.org/cwltool#generation": 0
+    }
+}[0m
+[1;30mINFO[0m [step view] start
+[1;30mDEBUG[0m [32m[job view] initializing from file:///home/voblgobl/bioinf_hw3/cwl/samtools_view.cwl as part of step view[0m
+[1;30mDEBUG[0m [32m[job view] {
+    "sam_file": {
+        "location": "file:///tmp/v5kk3c25/aligned.sam",
+        "basename": "aligned.sam",
+        "nameroot": "aligned",
+        "nameext": ".sam",
+        "class": "File",
+        "checksum": "sha1$9e488e4d21c38fb76bdf596855d7cee381703a73",
+        "size": 808293052,
+        "http://commonwl.org/cwltool#generation": 0
+    }
+}[0m
+[1;30mDEBUG[0m [32m[job view] path mappings is {
+    "file:///tmp/v5kk3c25/aligned.sam": [
+        "/tmp/v5kk3c25/aligned.sam",
+        "/tmp/8i0r7ej9/stg09d477be-8474-4ec9-bb78-da3fb52f33fe/aligned.sam",
+        "File",
+        true
+    ]
+}[0m
+[1;30mDEBUG[0m [32m[job view] command line bindings is [
+    {
+        "position": [
+            -1000000,
+            0
+        ],
+        "datum": "samtools"
+    },
+    {
+        "position": [
+            -1000000,
+            1
+        ],
+        "datum": "view"
+    },
+    {
+        "position": [
+            -1000000,
+            2
+        ],
+        "datum": "-b"
+    },
+    {
+        "position": [
+            0,
+            0
+        ],
+        "datum": "-o"
+    },
+    {
+        "position": [
+            0,
+            1
+        ],
+        "datum": "converted.bam"
+    },
+    {
+        "position": [
+            1,
+            "sam_file"
+        ],
+        "datum": {
+            "location": "file:///tmp/v5kk3c25/aligned.sam",
+            "basename": "aligned.sam",
+            "nameroot": "aligned",
+            "nameext": ".sam",
+            "class": "File",
+            "checksum": "sha1$9e488e4d21c38fb76bdf596855d7cee381703a73",
+            "size": 808293052,
+            "http://commonwl.org/cwltool#generation": 0,
+            "path": "/tmp/8i0r7ej9/stg09d477be-8474-4ec9-bb78-da3fb52f33fe/aligned.sam",
+            "dirname": "/tmp/8i0r7ej9/stg09d477be-8474-4ec9-bb78-da3fb52f33fe"
+        }
+    }
+][0m
+[1;30mDEBUG[0m [32m[job view] initial work dir {}[0m
+[1;30mINFO[0m [job view] /tmp/7jvmz2le$ samtools \
+    view \
+    -b \
+    -o \
+    converted.bam \
+    /tmp/8i0r7ej9/stg09d477be-8474-4ec9-bb78-da3fb52f33fe/aligned.sam
+[1;30mINFO[0m [job view] Max memory used: 2MiB
+[1;30mINFO[0m [job view] completed success
+[1;30mDEBUG[0m [32m[job view] outputs {
+    "bam_file": {
+        "location": "file:///tmp/7jvmz2le/converted.bam",
+        "basename": "converted.bam",
+        "nameroot": "converted",
+        "nameext": ".bam",
+        "class": "File",
+        "checksum": "sha1$761915b0b1a8f14aaf714a853f49624e55ef92e3",
+        "size": 239249972,
+        "http://commonwl.org/cwltool#generation": 0
+    }
+}[0m
+[1;30mDEBUG[0m [32m[step view] produced output {
+    "file:///home/voblgobl/bioinf_hw3/cwl/mapping_workflow.cwl#view/bam_file": {
+        "location": "file:///tmp/7jvmz2le/converted.bam",
+        "basename": "converted.bam",
+        "nameroot": "converted",
+        "nameext": ".bam",
+        "class": "File",
+        "checksum": "sha1$761915b0b1a8f14aaf714a853f49624e55ef92e3",
+        "size": 239249972,
+        "http://commonwl.org/cwltool#generation": 0
+    }
+}[0m
+[1;30mINFO[0m [step view] completed success
+[1;30mDEBUG[0m [32m[job view] Removing input staging directory /tmp/8i0r7ej9[0m
+[1;30mDEBUG[0m [32m[job view] Removing temporary directory /tmp/o5yd98kp[0m
+[1;30mINFO[0m [workflow ] starting step sort_bam
+[1;30mDEBUG[0m [32m[step sort_bam] job input {
+    "file:///home/voblgobl/bioinf_hw3/cwl/mapping_workflow.cwl#sort_bam/bam_file": {
+        "location": "file:///tmp/7jvmz2le/converted.bam",
+        "basename": "converted.bam",
+        "nameroot": "converted",
+        "nameext": ".bam",
+        "class": "File",
+        "checksum": "sha1$761915b0b1a8f14aaf714a853f49624e55ef92e3",
+        "size": 239249972,
+        "http://commonwl.org/cwltool#generation": 0
+    }
+}[0m
+[1;30mDEBUG[0m [32m[step sort_bam] evaluated job input to {
+    "file:///home/voblgobl/bioinf_hw3/cwl/mapping_workflow.cwl#sort_bam/bam_file": {
+        "location": "file:///tmp/7jvmz2le/converted.bam",
+        "basename": "converted.bam",
+        "nameroot": "converted",
+        "nameext": ".bam",
+        "class": "File",
+        "checksum": "sha1$761915b0b1a8f14aaf714a853f49624e55ef92e3",
+        "size": 239249972,
+        "http://commonwl.org/cwltool#generation": 0
+    }
+}[0m
+[1;30mINFO[0m [step sort_bam] start
+[1;30mDEBUG[0m [32m[job sort_bam] initializing from file:///home/voblgobl/bioinf_hw3/cwl/samtools_sort.cwl as part of step sort_bam[0m
+[1;30mDEBUG[0m [32m[job sort_bam] {
+    "bam_file": {
+        "location": "file:///tmp/7jvmz2le/converted.bam",
+        "basename": "converted.bam",
+        "nameroot": "converted",
+        "nameext": ".bam",
+        "class": "File",
+        "checksum": "sha1$761915b0b1a8f14aaf714a853f49624e55ef92e3",
+        "size": 239249972,
+        "http://commonwl.org/cwltool#generation": 0
+    }
+}[0m
+[1;30mDEBUG[0m [32m[job sort_bam] path mappings is {
+    "file:///tmp/7jvmz2le/converted.bam": [
+        "/tmp/7jvmz2le/converted.bam",
+        "/tmp/g8zxbg2_/stga1f2a025-ca98-4954-9a35-397bb5d8aca3/converted.bam",
+        "File",
+        true
+    ]
+}[0m
+[1;30mDEBUG[0m [32m[job sort_bam] command line bindings is [
+    {
+        "position": [
+            -1000000,
+            0
+        ],
+        "datum": "samtools"
+    },
+    {
+        "position": [
+            -1000000,
+            1
+        ],
+        "datum": "sort"
+    },
+    {
+        "position": [
+            0,
+            0
+        ],
+        "datum": "-o"
+    },
+    {
+        "position": [
+            0,
+            1
+        ],
+        "datum": "aligned.sorted.bam"
+    },
+    {
+        "position": [
+            1,
+            "bam_file"
+        ],
+        "datum": {
+            "location": "file:///tmp/7jvmz2le/converted.bam",
+            "basename": "converted.bam",
+            "nameroot": "converted",
+            "nameext": ".bam",
+            "class": "File",
+            "checksum": "sha1$761915b0b1a8f14aaf714a853f49624e55ef92e3",
+            "size": 239249972,
+            "http://commonwl.org/cwltool#generation": 0,
+            "path": "/tmp/g8zxbg2_/stga1f2a025-ca98-4954-9a35-397bb5d8aca3/converted.bam",
+            "dirname": "/tmp/g8zxbg2_/stga1f2a025-ca98-4954-9a35-397bb5d8aca3"
+        }
+    }
+][0m
+[1;30mDEBUG[0m [32m[job sort_bam] initial work dir {}[0m
+[1;30mINFO[0m [job sort_bam] /tmp/9vtdz122$ samtools \
+    sort \
+    -o \
+    aligned.sorted.bam \
+    /tmp/g8zxbg2_/stga1f2a025-ca98-4954-9a35-397bb5d8aca3/converted.bam
+[1;30mINFO[0m [job sort_bam] Max memory used: 733MiB
+[1;30mINFO[0m [job sort_bam] completed success
+[1;30mDEBUG[0m [32m[job sort_bam] outputs {
+    "sorted_bam": {
+        "location": "file:///tmp/9vtdz122/aligned.sorted.bam",
+        "basename": "aligned.sorted.bam",
+        "nameroot": "aligned.sorted",
+        "nameext": ".bam",
+        "class": "File",
+        "checksum": "sha1$e171956013c7dd6b202f6baee541e2b9670bc105",
+        "size": 178118536,
+        "http://commonwl.org/cwltool#generation": 0
+    }
+}[0m
+[1;30mDEBUG[0m [32m[step sort_bam] produced output {
+    "file:///home/voblgobl/bioinf_hw3/cwl/mapping_workflow.cwl#sort_bam/sorted_bam": {
+        "location": "file:///tmp/9vtdz122/aligned.sorted.bam",
+        "basename": "aligned.sorted.bam",
+        "nameroot": "aligned.sorted",
+        "nameext": ".bam",
+        "class": "File",
+        "checksum": "sha1$e171956013c7dd6b202f6baee541e2b9670bc105",
+        "size": 178118536,
+        "http://commonwl.org/cwltool#generation": 0
+    }
+}[0m
+[1;30mINFO[0m [step sort_bam] completed success
+[1;30mDEBUG[0m [32m[job sort_bam] Removing input staging directory /tmp/g8zxbg2_[0m
+[1;30mDEBUG[0m [32m[job sort_bam] Removing temporary directory /tmp/hxqmsgvy[0m
+[1;30mDEBUG[0m [32m[workflow ] job step file:///home/voblgobl/bioinf_hw3/cwl/mapping_workflow.cwl#parse not ready[0m
+[1;30mINFO[0m [workflow ] starting step flagstat
+[1;30mDEBUG[0m [32m[step flagstat] job input {
+    "file:///home/voblgobl/bioinf_hw3/cwl/mapping_workflow.cwl#flagstat/sorted_bam": {
+        "location": "file:///tmp/9vtdz122/aligned.sorted.bam",
+        "basename": "aligned.sorted.bam",
+        "nameroot": "aligned.sorted",
+        "nameext": ".bam",
+        "class": "File",
+        "checksum": "sha1$e171956013c7dd6b202f6baee541e2b9670bc105",
+        "size": 178118536,
+        "http://commonwl.org/cwltool#generation": 0
+    }
+}[0m
+[1;30mDEBUG[0m [32m[step flagstat] evaluated job input to {
+    "file:///home/voblgobl/bioinf_hw3/cwl/mapping_workflow.cwl#flagstat/sorted_bam": {
+        "location": "file:///tmp/9vtdz122/aligned.sorted.bam",
+        "basename": "aligned.sorted.bam",
+        "nameroot": "aligned.sorted",
+        "nameext": ".bam",
+        "class": "File",
+        "checksum": "sha1$e171956013c7dd6b202f6baee541e2b9670bc105",
+        "size": 178118536,
+        "http://commonwl.org/cwltool#generation": 0
+    }
+}[0m
+[1;30mINFO[0m [step flagstat] start
+[1;30mDEBUG[0m [32m[job flagstat] initializing from file:///home/voblgobl/bioinf_hw3/cwl/samtools_flagstat.cwl as part of step flagstat[0m
+[1;30mDEBUG[0m [32m[job flagstat] {
+    "sorted_bam": {
+        "location": "file:///tmp/9vtdz122/aligned.sorted.bam",
+        "basename": "aligned.sorted.bam",
+        "nameroot": "aligned.sorted",
+        "nameext": ".bam",
+        "class": "File",
+        "checksum": "sha1$e171956013c7dd6b202f6baee541e2b9670bc105",
+        "size": 178118536,
+        "http://commonwl.org/cwltool#generation": 0
+    }
+}[0m
+[1;30mDEBUG[0m [32m[job flagstat] path mappings is {
+    "file:///tmp/9vtdz122/aligned.sorted.bam": [
+        "/tmp/9vtdz122/aligned.sorted.bam",
+        "/tmp/bxx2bh6a/stge7d1385f-fad7-4db1-8596-b5db7bd92dde/aligned.sorted.bam",
+        "File",
+        true
+    ]
+}[0m
+[1;30mDEBUG[0m [32m[job flagstat] command line bindings is [
+    {
+        "position": [
+            -1000000,
+            0
+        ],
+        "datum": "samtools"
+    },
+    {
+        "position": [
+            -1000000,
+            1
+        ],
+        "datum": "flagstat"
+    },
+    {
+        "position": [
+            1,
+            "sorted_bam"
+        ],
+        "datum": {
+            "location": "file:///tmp/9vtdz122/aligned.sorted.bam",
+            "basename": "aligned.sorted.bam",
+            "nameroot": "aligned.sorted",
+            "nameext": ".bam",
+            "class": "File",
+            "checksum": "sha1$e171956013c7dd6b202f6baee541e2b9670bc105",
+            "size": 178118536,
+            "http://commonwl.org/cwltool#generation": 0,
+            "path": "/tmp/bxx2bh6a/stge7d1385f-fad7-4db1-8596-b5db7bd92dde/aligned.sorted.bam",
+            "dirname": "/tmp/bxx2bh6a/stge7d1385f-fad7-4db1-8596-b5db7bd92dde"
+        }
+    }
+][0m
+[1;30mDEBUG[0m [32m[job flagstat] initial work dir {}[0m
+[1;30mINFO[0m [job flagstat] /tmp/e5ge70f1$ samtools \
+    flagstat \
+    /tmp/bxx2bh6a/stge7d1385f-fad7-4db1-8596-b5db7bd92dde/aligned.sorted.bam > /tmp/e5ge70f1/flagstat.txt
+[1;30mINFO[0m [job flagstat] Max memory used: 1MiB
+[1;30mINFO[0m [job flagstat] completed success
+[1;30mDEBUG[0m [32m[job flagstat] outputs {
+    "flagstat_txt": {
+        "location": "file:///tmp/e5ge70f1/flagstat.txt",
+        "basename": "flagstat.txt",
+        "nameroot": "flagstat",
+        "nameext": ".txt",
+        "class": "File",
+        "checksum": "sha1$02ad23699cb92e2460f16fdccb6021eafa7c4204",
+        "size": 512,
+        "http://commonwl.org/cwltool#generation": 0
+    }
+}[0m
+[1;30mDEBUG[0m [32m[step flagstat] produced output {
+    "file:///home/voblgobl/bioinf_hw3/cwl/mapping_workflow.cwl#flagstat/flagstat_txt": {
+        "location": "file:///tmp/e5ge70f1/flagstat.txt",
+        "basename": "flagstat.txt",
+        "nameroot": "flagstat",
+        "nameext": ".txt",
+        "class": "File",
+        "checksum": "sha1$02ad23699cb92e2460f16fdccb6021eafa7c4204",
+        "size": 512,
+        "http://commonwl.org/cwltool#generation": 0
+    }
+}[0m
+[1;30mINFO[0m [step flagstat] completed success
+[1;30mDEBUG[0m [32m[job flagstat] Removing input staging directory /tmp/bxx2bh6a[0m
+[1;30mDEBUG[0m [32m[job flagstat] Removing temporary directory /tmp/308mezt6[0m
+[1;30mINFO[0m [workflow ] starting step index
+[1;30mDEBUG[0m [32m[step index] job input {
+    "file:///home/voblgobl/bioinf_hw3/cwl/mapping_workflow.cwl#index/sorted_bam": {
+        "location": "file:///tmp/9vtdz122/aligned.sorted.bam",
+        "basename": "aligned.sorted.bam",
+        "nameroot": "aligned.sorted",
+        "nameext": ".bam",
+        "class": "File",
+        "checksum": "sha1$e171956013c7dd6b202f6baee541e2b9670bc105",
+        "size": 178118536,
+        "http://commonwl.org/cwltool#generation": 0
+    }
+}[0m
+[1;30mDEBUG[0m [32m[step index] evaluated job input to {
+    "file:///home/voblgobl/bioinf_hw3/cwl/mapping_workflow.cwl#index/sorted_bam": {
+        "location": "file:///tmp/9vtdz122/aligned.sorted.bam",
+        "basename": "aligned.sorted.bam",
+        "nameroot": "aligned.sorted",
+        "nameext": ".bam",
+        "class": "File",
+        "checksum": "sha1$e171956013c7dd6b202f6baee541e2b9670bc105",
+        "size": 178118536,
+        "http://commonwl.org/cwltool#generation": 0
+    }
+}[0m
+[1;30mINFO[0m [step index] start
+[1;30mDEBUG[0m [32m[job index] initializing from file:///home/voblgobl/bioinf_hw3/cwl/samtools_index.cwl as part of step index[0m
+[1;30mDEBUG[0m [32m[job index] {
+    "sorted_bam": {
+        "location": "file:///tmp/9vtdz122/aligned.sorted.bam",
+        "basename": "aligned.sorted.bam",
+        "nameroot": "aligned.sorted",
+        "nameext": ".bam",
+        "class": "File",
+        "checksum": "sha1$e171956013c7dd6b202f6baee541e2b9670bc105",
+        "size": 178118536,
+        "http://commonwl.org/cwltool#generation": 0
+    }
+}[0m
+[1;30mDEBUG[0m [32m[job index] path mappings is {
+    "file:///tmp/9vtdz122/aligned.sorted.bam": [
+        "/tmp/9vtdz122/aligned.sorted.bam",
+        "/tmp/h906rpht/stg7b887795-003f-42dd-a133-8da6cb1a6cff/aligned.sorted.bam",
+        "File",
+        true
+    ]
+}[0m
+[1;30mDEBUG[0m [32m[job index] command line bindings is [
+    {
+        "position": [
+            -1000000,
+            0
+        ],
+        "datum": "samtools"
+    },
+    {
+        "position": [
+            -1000000,
+            1
+        ],
+        "datum": "index"
+    },
+    {
+        "position": [
+            0,
+            0
+        ],
+        "datum": "-o"
+    },
+    {
+        "position": [
+            0,
+            1
+        ],
+        "datum": "aligned.sorted.bam.bai"
+    },
+    {
+        "position": [
+            1,
+            "sorted_bam"
+        ],
+        "datum": {
+            "location": "file:///tmp/9vtdz122/aligned.sorted.bam",
+            "basename": "aligned.sorted.bam",
+            "nameroot": "aligned.sorted",
+            "nameext": ".bam",
+            "class": "File",
+            "checksum": "sha1$e171956013c7dd6b202f6baee541e2b9670bc105",
+            "size": 178118536,
+            "http://commonwl.org/cwltool#generation": 0,
+            "path": "/tmp/h906rpht/stg7b887795-003f-42dd-a133-8da6cb1a6cff/aligned.sorted.bam",
+            "dirname": "/tmp/h906rpht/stg7b887795-003f-42dd-a133-8da6cb1a6cff"
+        }
+    }
+][0m
+[1;30mDEBUG[0m [32m[job index] initial work dir {}[0m
+[1;30mINFO[0m [job index] /tmp/v8w88rh6$ samtools \
+    index \
+    -o \
+    aligned.sorted.bam.bai \
+    /tmp/h906rpht/stg7b887795-003f-42dd-a133-8da6cb1a6cff/aligned.sorted.bam
+[1;30mINFO[0m [job index] Max memory used: 1MiB
+[1;30mINFO[0m [job index] completed success
+[1;30mDEBUG[0m [32m[job index] outputs {
+    "bai_index": {
+        "location": "file:///tmp/v8w88rh6/aligned.sorted.bam.bai",
+        "basename": "aligned.sorted.bam.bai",
+        "nameroot": "aligned.sorted.bam",
+        "nameext": ".bai",
+        "class": "File",
+        "checksum": "sha1$ff30546fe69d350a4c080d62e3d81807dc88d177",
+        "size": 14352,
+        "http://commonwl.org/cwltool#generation": 0
+    }
+}[0m
+[1;30mDEBUG[0m [32m[step index] produced output {
+    "file:///home/voblgobl/bioinf_hw3/cwl/mapping_workflow.cwl#index/bai_index": {
+        "location": "file:///tmp/v8w88rh6/aligned.sorted.bam.bai",
+        "basename": "aligned.sorted.bam.bai",
+        "nameroot": "aligned.sorted.bam",
+        "nameext": ".bai",
+        "class": "File",
+        "checksum": "sha1$ff30546fe69d350a4c080d62e3d81807dc88d177",
+        "size": 14352,
+        "http://commonwl.org/cwltool#generation": 0
+    }
+}[0m
+[1;30mINFO[0m [step index] completed success
+[1;30mDEBUG[0m [32m[job index] Removing input staging directory /tmp/h906rpht[0m
+[1;30mDEBUG[0m [32m[job index] Removing temporary directory /tmp/ptkwl7id[0m
+[1;30mINFO[0m [workflow ] starting step parse
+[1;30mDEBUG[0m [32m[step parse] job input {
+    "file:///home/voblgobl/bioinf_hw3/cwl/mapping_workflow.cwl#parse/flagstat_file": {
+        "location": "file:///tmp/e5ge70f1/flagstat.txt",
+        "basename": "flagstat.txt",
+        "nameroot": "flagstat",
+        "nameext": ".txt",
+        "class": "File",
+        "checksum": "sha1$02ad23699cb92e2460f16fdccb6021eafa7c4204",
+        "size": 512,
+        "http://commonwl.org/cwltool#generation": 0
+    },
+    "file:///home/voblgobl/bioinf_hw3/cwl/mapping_workflow.cwl#parse/ok_threshold": 95,
+    "file:///home/voblgobl/bioinf_hw3/cwl/mapping_workflow.cwl#parse/pot_threshold": 80
+}[0m
+[1;30mDEBUG[0m [32m[step parse] evaluated job input to {
+    "file:///home/voblgobl/bioinf_hw3/cwl/mapping_workflow.cwl#parse/flagstat_file": {
+        "location": "file:///tmp/e5ge70f1/flagstat.txt",
+        "basename": "flagstat.txt",
+        "nameroot": "flagstat",
+        "nameext": ".txt",
+        "class": "File",
+        "checksum": "sha1$02ad23699cb92e2460f16fdccb6021eafa7c4204",
+        "size": 512,
+        "http://commonwl.org/cwltool#generation": 0
+    },
+    "file:///home/voblgobl/bioinf_hw3/cwl/mapping_workflow.cwl#parse/ok_threshold": 95,
+    "file:///home/voblgobl/bioinf_hw3/cwl/mapping_workflow.cwl#parse/pot_threshold": 80
+}[0m
+[1;30mINFO[0m [step parse] start
+[1;30mDEBUG[0m [32m[job parse] initializing from file:///home/voblgobl/bioinf_hw3/cwl/parse_flagstat.cwl as part of step parse[0m
+[1;30mDEBUG[0m [32m[job parse] {
+    "flagstat_file": {
+        "location": "file:///tmp/e5ge70f1/flagstat.txt",
+        "basename": "flagstat.txt",
+        "nameroot": "flagstat",
+        "nameext": ".txt",
+        "class": "File",
+        "checksum": "sha1$02ad23699cb92e2460f16fdccb6021eafa7c4204",
+        "size": 512,
+        "http://commonwl.org/cwltool#generation": 0
+    },
+    "ok_threshold": 95,
+    "pot_threshold": 80
+}[0m
+[1;30mDEBUG[0m [32m[job parse] path mappings is {
+    "file:///tmp/e5ge70f1/flagstat.txt": [
+        "/tmp/e5ge70f1/flagstat.txt",
+        "/tmp/6owx59c8/stg9c753bb5-27e9-4696-a2ff-505f6fa5ed89/flagstat.txt",
+        "File",
+        true
+    ]
+}[0m
+[1;30mDEBUG[0m [32m[job parse] command line bindings is [
+    {
+        "position": [
+            -1000000,
+            0
+        ],
+        "datum": "python3"
+    },
+    {
+        "position": [
+            0,
+            0
+        ],
+        "datum": "-c"
+    },
+    {
+        "position": [
+            0,
+            1
+        ],
+        "datum": "import sys, re\nwith open(sys.argv[1]) as f:\n    content = f.read()\nmatch = re.search(r'(\\d+)\\s+\\+\\s+0\\s+mapped\\s+\\((\\d+\\.?\\d*)%', content)\nif match:\n    percent = float(match.group(2))\n    ok = int(sys.argv[2])\n    pot = int(sys.argv[3])\n    if percent >= ok:\n        status = \"OK\"\n    elif percent >= pot:\n        status = \"pot OK\"\n    else:\n        status = \"FAIL\"\n    # \u0417\u0430\u043f\u0438\u0441\u044b\u0432\u0430\u0435\u043c \u0441\u0442\u0430\u0442\u0443\u0441\n    with open(\"status.txt\", \"w\") as out:\n        out.write(f\"{status}\\n\")\n    # \u0417\u0430\u043f\u0438\u0441\u044b\u0432\u0430\u0435\u043c \u043f\u0440\u043e\u0446\u0435\u043d\u0442\n    with open(\"mapping_percent.txt\", \"w\") as out:\n        out.write(f\"{percent}\\n\")\nelse:\n    with open(\"status.txt\", \"w\") as out:\n        out.write(\"ERROR\\n\")\n    with open(\"mapping_percent.txt\", \"w\") as out:\n        out.write(\"0\\n\")\n    sys.exit(1)\n"
+    },
+    {
+        "position": [
+            1,
+            "flagstat_file"
+        ],
+        "datum": {
+            "location": "file:///tmp/e5ge70f1/flagstat.txt",
+            "basename": "flagstat.txt",
+            "nameroot": "flagstat",
+            "nameext": ".txt",
+            "class": "File",
+            "checksum": "sha1$02ad23699cb92e2460f16fdccb6021eafa7c4204",
+            "size": 512,
+            "http://commonwl.org/cwltool#generation": 0,
+            "path": "/tmp/6owx59c8/stg9c753bb5-27e9-4696-a2ff-505f6fa5ed89/flagstat.txt",
+            "dirname": "/tmp/6owx59c8/stg9c753bb5-27e9-4696-a2ff-505f6fa5ed89"
+        }
+    },
+    {
+        "position": [
+            2,
+            "ok_threshold"
+        ],
+        "datum": 95
+    },
+    {
+        "position": [
+            3,
+            "pot_threshold"
+        ],
+        "datum": 80
+    }
+][0m
+[1;30mDEBUG[0m [32m[job parse] initial work dir {}[0m
+[1;30mINFO[0m [job parse] /tmp/nda7tutt$ python3 \
+    -c \
+    'import sys, re
+with open(sys.argv[1]) as f:
+    content = f.read()
+match = re.search(r'"'"'(\d+)\s+\+\s+0\s+mapped\s+\((\d+\.?\d*)%'"'"', content)
+if match:
+    percent = float(match.group(2))
+    ok = int(sys.argv[2])
+    pot = int(sys.argv[3])
+    if percent >= ok:
+        status = "OK"
+    elif percent >= pot:
+        status = "pot OK"
+    else:
+        status = "FAIL"
+    # Записываем статус
+    with open("status.txt", "w") as out:
+        out.write(f"{status}\n")
+    # Записываем процент
+    with open("mapping_percent.txt", "w") as out:
+        out.write(f"{percent}\n")
+else:
+    with open("status.txt", "w") as out:
+        out.write("ERROR\n")
+    with open("mapping_percent.txt", "w") as out:
+        out.write("0\n")
+    sys.exit(1)
+' \
+    /tmp/6owx59c8/stg9c753bb5-27e9-4696-a2ff-505f6fa5ed89/flagstat.txt \
+    95 \
+    80
+[1;30mDEBUG[0m [32mCould not collect memory usage, job ended before monitoring began.[0m
+[1;30mINFO[0m [job parse] completed success
+[1;30mDEBUG[0m [32m[job parse] outputs {
+    "mapping_percent": {
+        "location": "file:///tmp/nda7tutt/mapping_percent.txt",
+        "basename": "mapping_percent.txt",
+        "nameroot": "mapping_percent",
+        "nameext": ".txt",
+        "class": "File",
+        "checksum": "sha1$5c280970d7987508cdf810f30891fad8f486fd27",
+        "size": 6,
+        "http://commonwl.org/cwltool#generation": 0
+    },
+    "status_output": {
+        "location": "file:///tmp/nda7tutt/status.txt",
+        "basename": "status.txt",
+        "nameroot": "status",
+        "nameext": ".txt",
+        "class": "File",
+        "checksum": "sha1$b831459aa963841f612caebbba5566a1d785dcc5",
+        "size": 7,
+        "http://commonwl.org/cwltool#generation": 0
+    }
+}[0m
+[1;30mDEBUG[0m [32m[step parse] produced output {
+    "file:///home/voblgobl/bioinf_hw3/cwl/mapping_workflow.cwl#parse/status_output": {
+        "location": "file:///tmp/nda7tutt/status.txt",
+        "basename": "status.txt",
+        "nameroot": "status",
+        "nameext": ".txt",
+        "class": "File",
+        "checksum": "sha1$b831459aa963841f612caebbba5566a1d785dcc5",
+        "size": 7,
+        "http://commonwl.org/cwltool#generation": 0
+    },
+    "file:///home/voblgobl/bioinf_hw3/cwl/mapping_workflow.cwl#parse/mapping_percent": {
+        "location": "file:///tmp/nda7tutt/mapping_percent.txt",
+        "basename": "mapping_percent.txt",
+        "nameroot": "mapping_percent",
+        "nameext": ".txt",
+        "class": "File",
+        "checksum": "sha1$5c280970d7987508cdf810f30891fad8f486fd27",
+        "size": 6,
+        "http://commonwl.org/cwltool#generation": 0
+    }
+}[0m
+[1;30mINFO[0m [step parse] completed success
+[1;30mINFO[0m [workflow ] completed success
+[1;30mDEBUG[0m [32m[workflow ] outputs {
+    "flagstat_result": {
+        "location": "file:///tmp/e5ge70f1/flagstat.txt",
+        "basename": "flagstat.txt",
+        "nameroot": "flagstat",
+        "nameext": ".txt",
+        "class": "File",
+        "checksum": "sha1$02ad23699cb92e2460f16fdccb6021eafa7c4204",
+        "size": 512,
+        "http://commonwl.org/cwltool#generation": 0
+    },
+    "mapping_percent": {
+        "location": "file:///tmp/nda7tutt/mapping_percent.txt",
+        "basename": "mapping_percent.txt",
+        "nameroot": "mapping_percent",
+        "nameext": ".txt",
+        "class": "File",
+        "checksum": "sha1$5c280970d7987508cdf810f30891fad8f486fd27",
+        "size": 6,
+        "http://commonwl.org/cwltool#generation": 0
+    },
+    "status_output": {
+        "location": "file:///tmp/nda7tutt/status.txt",
+        "basename": "status.txt",
+        "nameroot": "status",
+        "nameext": ".txt",
+        "class": "File",
+        "checksum": "sha1$b831459aa963841f612caebbba5566a1d785dcc5",
+        "size": 7,
+        "http://commonwl.org/cwltool#generation": 0
+    }
+}[0m
+[1;30mDEBUG[0m [32m[job parse] Removing input staging directory /tmp/6owx59c8[0m
+[1;30mDEBUG[0m [32m[job parse] Removing temporary directory /tmp/irjglpee[0m
+[1;30mDEBUG[0m [32mMoving /tmp/e5ge70f1/flagstat.txt to /home/voblgobl/bioinf_hw3/cwl_results/flagstat.txt[0m
+[1;30mDEBUG[0m [32mMoving /tmp/nda7tutt/mapping_percent.txt to /home/voblgobl/bioinf_hw3/cwl_results/mapping_percent.txt[0m
+[1;30mDEBUG[0m [32mMoving /tmp/nda7tutt/status.txt to /home/voblgobl/bioinf_hw3/cwl_results/status.txt[0m
+[1;30mDEBUG[0m [32mRemoving intermediate output directory /tmp/v5kk3c25[0m
+[1;30mDEBUG[0m [32mRemoving intermediate output directory /tmp/v8w88rh6[0m
+[1;30mDEBUG[0m [32mRemoving intermediate output directory /tmp/xt39x9hu[0m
+[1;30mDEBUG[0m [32mRemoving intermediate output directory /tmp/e5ge70f1[0m
+[1;30mDEBUG[0m [32mRemoving intermediate output directory /tmp/7jvmz2le[0m
+[1;30mDEBUG[0m [32mRemoving intermediate output directory /tmp/nda7tutt[0m
+[1;30mDEBUG[0m [32mRemoving intermediate output directory /tmp/9vtdz122[0m
+{
+    "flagstat_result": {
+        "location": "file:///home/voblgobl/bioinf_hw3/cwl_results/flagstat.txt",
+        "basename": "flagstat.txt",
+        "class": "File",
+        "checksum": "sha1$02ad23699cb92e2460f16fdccb6021eafa7c4204",
+        "size": 512,
+        "path": "/home/voblgobl/bioinf_hw3/cwl_results/flagstat.txt"
+    },
+    "mapping_percent": {
+        "location": "file:///home/voblgobl/bioinf_hw3/cwl_results/mapping_percent.txt",
+        "basename": "mapping_percent.txt",
+        "class": "File",
+        "checksum": "sha1$5c280970d7987508cdf810f30891fad8f486fd27",
+        "size": 6,
+        "path": "/home/voblgobl/bioinf_hw3/cwl_results/mapping_percent.txt"
+    },
+    "status_output": {
+        "location": "file:///home/voblgobl/bioinf_hw3/cwl_results/status.txt",
+        "basename": "status.txt",
+        "class": "File",
+        "checksum": "sha1$b831459aa963841f612caebbba5566a1d785dcc5",
+        "size": 7,
+        "path": "/home/voblgobl/bioinf_hw3/cwl_results/status.txt"
+    }
+}[1;30mINFO[0m Final process status is success
