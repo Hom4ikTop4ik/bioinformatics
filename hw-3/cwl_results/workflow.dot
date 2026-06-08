@@ -1,0 +1,48 @@
+digraph G {
+bgcolor="#eeeeee";
+clusterrank=local;
+labelloc=bottom;
+labeljust=right;
+"sort_bam" [fillcolor=lightgoldenrodyellow, style=filled, label="sort_bam", shape=record];
+"flagstat" [fillcolor=lightgoldenrodyellow, style=filled, label="Flagstat statistics", shape=record];
+"sort_bam" -> "flagstat";
+"sort_bam" [fillcolor=lightgoldenrodyellow, style=filled, label="sort_bam", shape=record];
+"index" [fillcolor=lightgoldenrodyellow, style=filled, label=index, shape=record];
+"sort_bam" -> "index";
+"flagstat" [fillcolor=lightgoldenrodyellow, style=filled, label="Flagstat statistics", shape=record];
+"parse" [fillcolor=lightgoldenrodyellow, style=filled, label="Flagstat parser", shape=record];
+"flagstat" -> "parse";
+"view" [fillcolor=lightgoldenrodyellow, style=filled, label="SAM to BAM converter", shape=record];
+"sort_bam" [fillcolor=lightgoldenrodyellow, style=filled, label="sort_bam", shape=record];
+"view" -> "sort_bam";
+"bwa" [fillcolor=lightgoldenrodyellow, style=filled, label=bwa, shape=record];
+"view" [fillcolor=lightgoldenrodyellow, style=filled, label="SAM to BAM converter", shape=record];
+"bwa" -> "view";
+subgraph cluster_inputs {
+rank=same;
+style=dashed;
+label="Workflow Inputs";
+"reads_R1" [fillcolor="#94DDF4", style=filled, label="reads_R1", shape=record];
+"reads_R2" [fillcolor="#94DDF4", style=filled, label="reads_R2", shape=record];
+"reference" [fillcolor="#94DDF4", style=filled, label=reference, shape=record];
+"ok_threshold" [fillcolor="#94DDF4", style=filled, label="ok_threshold", shape=record];
+"pot_threshold" [fillcolor="#94DDF4", style=filled, label="pot_threshold", shape=record];
+}
+"reads_R1" -> "bwa";
+"reads_R2" -> "bwa";
+"reference" -> "bwa";
+"ok_threshold" -> "parse";
+"pot_threshold" -> "parse";
+subgraph cluster_outputs {
+rank=same;
+style=dashed;
+label="Workflow Outputs";
+labelloc=b;
+"flagstat_result" [fillcolor="#94DDF4", style=filled, label="flagstat_result", shape=record];
+"mapping_percent" [fillcolor="#94DDF4", style=filled, label="mapping_percent", shape=record];
+"status_output" [fillcolor="#94DDF4", style=filled, label="status_output", shape=record];
+}
+"flagstat" -> "flagstat_result";
+"parse" -> "mapping_percent";
+"parse" -> "status_output";
+}

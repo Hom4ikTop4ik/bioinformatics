@@ -1,0 +1,27 @@
+# input_mapping.yml
+
+reference:
+  class: File
+  path: ../ref/ecoli_ref.fna
+  secondaryFiles:
+    - class: File
+      path: ../ref/ecoli_ref.fna.amb
+    - class: File
+      path: ../ref/ecoli_ref.fna.ann
+    - class: File
+      path: ../ref/ecoli_ref.fna.bwt
+    - class: File
+      path: ../ref/ecoli_ref.fna.pac
+    - class: File
+      path: ../ref/ecoli_ref.fna.sa
+
+reads_R1:
+  class: File
+  path: ../data/SRR35085086_1.fastq.gz
+
+reads_R2:
+  class: File
+  path: ../data/SRR35085086_2.fastq.gz
+
+ok_threshold: 95
+pot_threshold: 80
