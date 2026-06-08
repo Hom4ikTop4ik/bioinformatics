@@ -175,7 +175,7 @@ grep "mapped (" hello_world_results/flagstat.txt
 ```
 
 
-### 3.8. дополонительно Быстрая оценка качества
+### 3.7. дополонительно Быстрая оценка качества
 ```bash
 # Запустите FastQC на одном из файлов
 fastqc data/SRR35085086_1.fastq.gz -o hello_world_results/
